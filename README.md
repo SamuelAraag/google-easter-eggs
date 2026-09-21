@@ -4,7 +4,7 @@ An independent, source-backed catalog of Google Search Easter eggs, games, and v
 
 ## Contributing via Discussions
 
-All contributions and catalog updates are centralized exclusively in [GitHub Discussions](https://github.com/SamuelAraag/google-easter-eggs/discussions).
+All contributions and catalog updates are centralized exclusively in <a href="https://github.com/SamuelAraag/google-easter-eggs/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a>.
 
 If you discover a new interaction, notice that an active one changed or stopped working, or wish to suggest improvements, open a discussion thread.
 
@@ -27,11 +27,11 @@ Five representative interactions to test right away. Search the query on `google
 
 | Type | Search query | Expected effect |
 | --- | --- | --- |
-| Animation | [67](https://www.google.com/search?q=67) | The results page briefly wobbles. |
-| Animation | [do a barrel roll](https://www.google.com/search?q=do+a+barrel+roll) | The results page rotates 360 degrees. |
-| Animation | [askew](https://www.google.com/search?q=askew) | The results page tilts slightly. |
-| Game | [block breaker](https://www.google.com/search?q=block+breaker) | Playable Breakout-style game directly in Search. |
-| Search joke | [recursion](https://www.google.com/search?q=recursion) | Google asks "Did you mean: recursion", linking back to the same search. |
+| Animation | <a href="https://www.google.com/search?q=67" target="_blank" rel="noopener noreferrer">67</a> | The results page briefly wobbles. |
+| Animation | <a href="https://www.google.com/search?q=do+a+barrel+roll" target="_blank" rel="noopener noreferrer">do a barrel roll</a> | The results page rotates 360 degrees. |
+| Animation | <a href="https://www.google.com/search?q=askew" target="_blank" rel="noopener noreferrer">askew</a> | The results page tilts slightly. |
+| Game | <a href="https://www.google.com/search?q=block+breaker" target="_blank" rel="noopener noreferrer">block breaker</a> | Playable Breakout-style game directly in Search. |
+| Search joke | <a href="https://www.google.com/search?q=recursion" target="_blank" rel="noopener noreferrer">recursion</a> | Google asks "Did you mean: recursion", linking back to the same search. |
 
 The full catalog of documented games, animations, and search tools is maintained in [`easter-eggs-data.json`](easter-eggs-data.json).
 
@@ -39,7 +39,7 @@ The full catalog of documented games, animations, and search tools is maintained
 
 **Block Breaker** is an arcade game rendered inside a Search card. While many visual Easter eggs run for only a few seconds, this entry is a playable mini-game embedded directly in Search results.
 
-To nominate the next featured entry, challenge this pick, or discuss new interactions, join the conversation in [GitHub Discussions](https://github.com/SamuelAraag/google-easter-eggs/discussions).
+To nominate the next featured entry, challenge this pick, or discuss new interactions, join the conversation in <a href="https://github.com/SamuelAraag/google-easter-eggs/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a>.
 
 ## Why this repository exists
 
