@@ -1,5 +1,7 @@
 # google-easter-eggs
 
+An independent, source-backed catalog of Google Search Easter eggs, games, and visual interactions, with direct links and reproducible verification.
+
 ## Try these first
 
 These are the most interesting source-backed interactions currently included in the catalog. Search the exact English query on `google.com`; a translated alternative is listed where it is commonly useful.
@@ -37,8 +39,6 @@ These are the most interesting source-backed interactions currently included in 
 Do you agree that Block Breaker deserves the top spot? Start a GitHub Discussion to nominate the next featured entry, challenge this pick, or share a reproducible verification for an interaction that is missing from the catalog. Include the search term, country/language, device, date, and a screenshot or recording whenever possible.
 
 Availability can still vary by country, language, device, account, accessibility settings, and Google experiments. Open [`easter-eggs-data.json`](easter-eggs-data.json) for aliases, sources, notes, and verification details.
-
-An interactive and **critically verified** catalog of Easter eggs, games, and visual effects triggered by searches on Google (`google.com/search`).
 
 ## Why this repository exists
 
