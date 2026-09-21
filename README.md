@@ -20,7 +20,7 @@ The full catalog of documented games, animations, and search tools is maintained
 
 **Block Breaker** is an arcade game rendered inside a Search card. While many visual Easter eggs run for only a few seconds, this entry is a playable mini-game embedded directly in Search results.
 
-To nominate a featured entry or suggest additions, open a GitHub Discussion or issue with the query, testing environment, date, and visual confirmation.
+To nominate the next featured entry, challenge this pick, or discuss new interactions, join the conversation in [GitHub Discussions](https://github.com/SamuelAraag/google-easter-eggs/discussions).
 
 ## Why this repository exists
 
@@ -55,7 +55,7 @@ An `unconfirmed` item is **not necessarily false**. It means only that reproduct
 ```json
 {
   "id": "short-identifier",
-  "term": "exact search term",
+  "term": ["exact query", "alias or translated variant"],
   "category": "game, calculator, tool, animation, myth...",
   "effect": "what should happen",
   "how_to_test": "step-by-step reproduction instructions",
@@ -86,15 +86,32 @@ Clicking search links sends query parameters directly to Google Search (`google.
 
 ## Contributing
 
-Contributions are welcome, especially:
+Contributions keep this catalog accurate and reproducible. You can contribute in two ways:
 
-1. **Retesting `unconfirmed` or `removed` items** with the date, language, region, and device used, plus a screenshot or recording when possible.
-2. **Adding new items** using the JSON schema above. Every item must include a verification method; copied lists without an independent test are not accepted.
-3. **Updating stale items** when an `active` interaction stops working.
+### 1. Suggest or discuss an interaction
+
+If you found a new interaction or noticed that an active one stopped working, share your report in [GitHub Discussions](https://github.com/SamuelAraag/google-easter-eggs/discussions) or open an [Issue](https://github.com/SamuelAraag/google-easter-eggs/issues).
+
+Please include the following verification details:
+
+- **Query:** exact search term
+- **Observed effect:** what appears or animates
+- **Environment:** Browser, operating system, search language (`hl`), region (`gl`)
+- **Test date:** YYYY-MM-DD
+- **Visual proof:** clean screenshot or recording (crop to the search card; make sure no personal data or email is visible)
+- **Source:** URL of an independent report, article, or forum thread
+
+### 2. Submit a Pull Request
+
+To add or update records directly in [`easter-eggs-data.json`](easter-eggs-data.json):
+
+1. Follow the JSON schema defined above.
+2. Include at least one independent source URL.
+3. Keep media lightweight (prefer optimized WebP or cropped GIFs under 1 MB).
+4. Verify the entry in an incognito window or clean browser profile before submitting.
 
 Do not trust any list, including this one, without testing it yourself.
 
 ## Disclaimer
 
 This is an independent catalog with no affiliation with Google or Alphabet. "Google" is a trademark of Google LLC. Third-party sites such as elgooG and mrdoob.com are mentioned for identification only and are not endorsed by this project.
-
