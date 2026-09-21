@@ -1,76 +1,111 @@
 # google-easter-eggs
 
-Um catálogo interativo e **criticamente verificado** de easter eggs, jogos e efeitos visuais acionados por termos digitados na busca do Google (`google.com/search`).
+## Try these first
 
-## Por que este repositório existe
+These are the most interesting source-backed interactions currently included in the catalog. Search the exact English query on `google.com`; a translated alternative is listed where it is commonly useful.
 
-Se você procurar "Google easter eggs" na internet, vai encontrar dezenas de listas quase idênticas, muitas geradas ou reescritas por IA, que misturam:
+| Type | Search query | What happens |
+| --- | --- | --- |
+| Animation | [67](https://www.google.com/search?q=67), [6-7](https://www.google.com/search?q=6-7), [6 7](https://www.google.com/search?q=6+7), or [six seven](https://www.google.com/search?q=six+seven) | The results page briefly wobbles. |
+| Animation | [do a barrel roll](https://www.google.com/search?q=do+a+barrel+roll) | The results page rotates 360 degrees. |
+| Animation | [askew](https://www.google.com/search?q=askew) | The results page tilts slightly. |
+| Animation | [blink html](https://www.google.com/search?q=blink+html) | Matching words in the results blink. |
+| Search joke | [recursion](https://www.google.com/search?q=recursion) | Google suggests searching for the same term again. |
+| Search joke | [anagram](https://www.google.com/search?q=anagram) | English Search suggests the joke “nag a ram.” |
+| Game | [block breaker](https://www.google.com/search?q=block+breaker) | A playable Breakout-style game card appears. |
+| Game | [pac-man](https://www.google.com/search?q=pac-man) | A playable Pac-Man card appears. |
+| Game | [snake game](https://www.google.com/search?q=snake+game) | A playable Snake card appears. |
+| Game | [solitaire](https://www.google.com/search?q=solitaire) | A playable Solitaire card appears. |
+| Game | [minesweeper](https://www.google.com/search?q=minesweeper) | A playable Minesweeper card appears. |
+| Game | [tic tac toe](https://www.google.com/search?q=tic+tac+toe) | Play against Google or another person on the same device. |
+| Game | [memory game](https://www.google.com/search?q=memory+game) | A short sound-and-memory game appears. |
+| Interactive toy | [spin a dreidel](https://www.google.com/search?q=spin+a+dreidel) | Spin a virtual dreidel. |
+| Interactive toy | [emoji kitchen](https://www.google.com/search?q=emoji+kitchen) | Combine emoji into stickers. |
+| Interactive tool | [flip a coin](https://www.google.com/search?q=flip+a+coin) | Flip an animated virtual coin. |
+| Interactive tool | [roll a die](https://www.google.com/search?q=roll+a+die) | Roll multiple virtual dice and add modifiers. |
+| Interactive tool | [spinner](https://www.google.com/search?q=spinner) | Use a number wheel or fidget-spinner mode. |
+| Interactive tool | [animal sounds](https://www.google.com/search?q=animal+sounds) | Play calls from multiple animals. |
+| Interactive tool | [metronome](https://www.google.com/search?q=metronome) | Set a BPM and play a metronome. |
+| Interactive tool | [color picker](https://www.google.com/search?q=color+picker) | Adjust a color and inspect its values. |
 
-- efeitos que realmente existem hoje;
-- efeitos que existiram no passado e foram removidos há anos (ex.: Zerg Rush, Atari Breakout);
-- efeitos sazonais apresentados como se estivessem sempre disponíveis;
-- sites de terceiros (o mais famoso é a família **elgooG** / **mrdoob.com**) apresentados como se fossem parte do Google — o caso mais comum é o "Google Gravity", que **nunca foi um recurso do google.com**;
-- itens que simplesmente não existem mais em nenhuma busca real, mesmo tendo sido citados como "ativos" por várias fontes.
+### Editor's pick: Block Breaker
 
-Este projeto tenta separar essas categorias, testando cada item diretamente em `google.com/search` e registrando a data e o método da verificação, em vez de apenas copiar listas existentes.
+**Block Breaker** is the best starting point. The page-wide animations are clever but over in seconds; this is a complete, replayable game built directly into Search. It is also the strongest proof that this catalog should cover interactive Search experiences, not only one-off visual jokes.
 
-## Como cada item é verificado
+### What do you think?
 
-Cada entrada em [`easter-eggs-data.json`](easter-eggs-data.json) é testada manualmente (ou por um agente controlando um navegador real) em `www.google.com/search`, sem estar logado com um histórico de navegação relevante, e o resultado observado é registrado. Quando possível, o termo é testado em mais de uma variação de idioma/região.
+Do you agree that Block Breaker deserves the top spot? Start a GitHub Discussion to nominate the next featured entry, challenge this pick, or share a reproducible verification for an interaction that is missing from the catalog. Include the search term, country/language, device, date, and a screenshot or recording whenever possible.
 
-### Definição dos status
+Availability can still vary by country, language, device, account, accessibility settings, and Google experiments. Open [`easter-eggs-data.json`](easter-eggs-data.json) for aliases, sources, notes, and verification details.
 
-| Status | Significado |
+An interactive and **critically verified** catalog of Easter eggs, games, and visual effects triggered by searches on Google (`google.com/search`).
+
+## Why this repository exists
+
+Searches for “Google Easter eggs” return many nearly identical lists, often generated or rewritten by AI, that mix together:
+
+- effects that still exist today;
+- effects that were removed years ago (for example, Zerg Rush and Atari Breakout);
+- seasonal effects presented as permanent features;
+- third-party sites (especially **elgooG** and **mrdoob.com**) presented as Google features — Google Gravity is the most common example, although it **was never a google.com feature**;
+- items that no longer work in any real Search result, despite being described as active.
+
+This project separates those categories by recording the search term, observed behavior, date, and verification method instead of copying existing lists.
+
+## How each item is verified
+
+Each entry in [`easter-eggs-data.json`](easter-eggs-data.json) is tested manually (or by an agent controlling a real browser) on `www.google.com/search`, without a relevant signed-in search history. When possible, the term is tested across more than one language or region.
+
+### Status definitions
+
+| Status | Meaning |
 |---|---|
-| `ativo` | Confirmado funcionando na data de verificação, testado diretamente. |
-| `sazonal` | Só funciona em datas/eventos específicos (feriados, aniversários, lançamentos). |
-| `removido` | Já existiu comprovadamente, mas não foi reproduzido na data de verificação, mesmo com variações do termo. |
-| `não confirmado` | Aparece em listas populares ou respostas de IA, mas não foi possível reproduzir de forma confiável. Pode ter sido descontinuado, ser restrito por região/conta, ou nunca ter existido exatamente como descrito. |
-| `não é do Google` | O efeito é real, mas roda em um site de terceiros que imita a marca Google (ex.: elgooG, mrdoob.com). Buscar o termo em `google.com/search` não produz o efeito. |
+| `active` | Confirmed working on the verification date and tested directly. |
+| `seasonal` | Only works during a specific date, event, holiday, anniversary, or launch. |
+| `removed` | Previously documented, but not reproduced on the verification date despite trying term variations. |
+| `unconfirmed` | Appears in popular lists or AI answers, but could not be reproduced reliably. It may be discontinued, region/account restricted, or inaccurate. |
+| `not-google` | The effect is real, but runs on a third-party site that imitates Google (for example, elgooG or mrdoob.com). Searching on `google.com/search` does not produce it. |
 
-Um item marcado como `não confirmado` **não é necessariamente falso** — só significa que, na data registrada, não foi possível reproduzi-lo. Fontes que afirmam o contrário são listadas no campo `source` de cada item para referência.
+An `unconfirmed` item is **not necessarily false**. It means only that reproduction was not reliable on the recorded date. Sources making the contrary claim are listed in the item's `source` field.
 
-## Estrutura de cada item
+## Item schema
 
 ```json
 {
-  "id": "identificador-curto",
-  "term": "termo exato para pesquisar",
-  "category": "categoria (jogo, calculadora, ferramenta, animação, mito...)",
-  "effect": "o que deveria acontecer",
-  "how_to_test": "instruções passo a passo para reproduzir",
-  "status": "ativo | sazonal | removido | não confirmado | não é do Google",
-  "verified_date": "AAAA-MM-DD",
-  "verification_method": "como e onde foi testado",
-  "source": ["fontes consultadas"],
-  "notes": "observações sobre idioma, dispositivo, região etc."
+  "id": "short-identifier",
+  "term": "exact search term",
+  "category": "game, calculator, tool, animation, myth...",
+  "effect": "what should happen",
+  "how_to_test": "step-by-step reproduction instructions",
+  "status": "active | seasonal | removed | unconfirmed | not-google",
+  "verified_date": "YYYY-MM-DD",
+  "verification_method": "where and how it was tested",
+  "source": ["consulted sources"],
+  "notes": "language, device, region, and other caveats"
 }
 ```
 
-## Catálogo interativo
+## Catalog format
 
-Abra [`index.html`](index.html) em qualquer navegador (não precisa de servidor) para ver o catálogo com filtros por status e categoria, e busca por termo.
+The catalog currently lives in this README. Structured records are kept in [`easter-eggs-data.json`](easter-eggs-data.json).
 
-## Limitações conhecidas
+## Known limitations
 
-- Muitos easter eggs recentes do Google são **painéis de conhecimento promocionais** ligados a filmes, séries, jogos e artistas (ex.: personagens da Marvel, K-pop, lançamentos de streaming). Esses painéis mudam com muita frequência — o que está ativo hoje pode sumir em semanas. Por isso, o catálogo foca principalmente em efeitos **duradouros** (calculadora, jogos clássicos, ferramentas) e trata a categoria de promoções de mídia como especialmente volátil.
-- Animações rápidas em CSS/JS (como "do a barrel roll") são difíceis de capturar em uma captura de tela estática feita logo após o carregamento da página, já que a animação termina e a página volta ao estado normal em 1–2 segundos. Nesses casos, o campo `verification_method` explica a limitação.
-- Resultados de busca podem variar por conta logada, histórico, região (`gl`), idioma (`hl`) e dispositivo (desktop x mobile). Isso está anotado no campo `notes` quando relevante.
+- Recent Google Easter eggs are often **promotional knowledge panels** tied to films, series, games, artists, and product launches. They can disappear within weeks, so this catalog prioritizes durable effects, classic games, and Search tools.
+- Short CSS/JavaScript animations such as “do a barrel roll” are difficult to capture in a static screenshot because they finish within seconds. The `verification_method` field records that limitation.
+- Search results can vary by signed-in account, history, region (`gl`), language (`hl`), device, accessibility settings, and active Google experiments. Relevant differences are recorded in `notes`.
 
-## Como contribuir
+## Contributing
 
-Contribuições são bem-vindas, principalmente:
+Contributions are welcome, especially:
 
-1. **Re-testar itens `não confirmado` ou `removido`** — se você conseguir reproduzir um desses, abra uma issue ou PR com data, idioma/região usados e, se possível, uma captura de tela.
-2. **Adicionar novos itens** — siga a estrutura JSON acima. Todo item novo precisa de `verification_method` preenchido; não aceitamos itens copiados de outras listas sem teste próprio.
-3. **Atualizar itens desatualizados** — se um item `ativo` parou de funcionar, atualize o status e explique como você testou.
+1. **Retesting `unconfirmed` or `removed` items** with the date, language, region, and device used, plus a screenshot or recording when possible.
+2. **Adding new items** using the JSON schema above. Every item must include a verification method; copied lists without an independent test are not accepted.
+3. **Updating stale items** when an `active` interaction stops working.
 
-Não aceite de graça a palavra de nenhuma lista (incluindo esta) — teste você mesmo antes de confiar.
+Do not trust any list, including this one, without testing it yourself.
 
-## Aviso
+## Disclaimer
 
-Este é um projeto de catalogação sem qualquer vínculo com o Google/Alphabet. "Google" é marca registrada da Google LLC. Sites de terceiros mencionados (como elgooG e mrdoob.com) são citados apenas para fins de identificação e não são endossados por este projeto.
+This is an independent catalog with no affiliation with Google or Alphabet. “Google” is a trademark of Google LLC. Third-party sites such as elgooG and mrdoob.com are mentioned for identification only and are not endorsed by this project.
 
-## Licença
-
-MIT — veja [LICENSE](LICENSE).
