@@ -2,52 +2,34 @@
 
 An independent, source-backed catalog of Google Search Easter eggs, games, and visual interactions, with direct links and reproducible verification.
 
-## Try these first
+## Quick start
 
-These are the most interesting source-backed interactions currently included in the catalog. Search the exact English query on `google.com`; a translated alternative is listed where it is commonly useful.
+Five representative interactions to test right away. Search the query on `google.com` (English interface recommended for the most consistent results):
 
-| Type | Search query | What happens |
+| Type | Search query | Expected effect |
 | --- | --- | --- |
-| Animation | [67](https://www.google.com/search?q=67), [6-7](https://www.google.com/search?q=6-7), [6 7](https://www.google.com/search?q=6+7), or [six seven](https://www.google.com/search?q=six+seven) | The results page briefly wobbles. |
+| Animation | [67](https://www.google.com/search?q=67) | The results page briefly wobbles. |
 | Animation | [do a barrel roll](https://www.google.com/search?q=do+a+barrel+roll) | The results page rotates 360 degrees. |
 | Animation | [askew](https://www.google.com/search?q=askew) | The results page tilts slightly. |
-| Animation | [blink html](https://www.google.com/search?q=blink+html) | Matching words in the results blink. |
-| Search joke | [recursion](https://www.google.com/search?q=recursion) | Google suggests searching for the same term again. |
-| Search joke | [anagram](https://www.google.com/search?q=anagram) | English Search suggests the joke “nag a ram.” |
-| Game | [block breaker](https://www.google.com/search?q=block+breaker) | A playable Breakout-style game card appears. |
-| Game | [pac-man](https://www.google.com/search?q=pac-man) | A playable Pac-Man card appears. |
-| Game | [snake game](https://www.google.com/search?q=snake+game) | A playable Snake card appears. |
-| Game | [solitaire](https://www.google.com/search?q=solitaire) | A playable Solitaire card appears. |
-| Game | [minesweeper](https://www.google.com/search?q=minesweeper) | A playable Minesweeper card appears. |
-| Game | [tic tac toe](https://www.google.com/search?q=tic+tac+toe) | Play against Google or another person on the same device. |
-| Game | [memory game](https://www.google.com/search?q=memory+game) | A short sound-and-memory game appears. |
-| Interactive toy | [spin a dreidel](https://www.google.com/search?q=spin+a+dreidel) | Spin a virtual dreidel. |
-| Interactive toy | [emoji kitchen](https://www.google.com/search?q=emoji+kitchen) | Combine emoji into stickers. |
-| Interactive tool | [flip a coin](https://www.google.com/search?q=flip+a+coin) | Flip an animated virtual coin. |
-| Interactive tool | [roll a die](https://www.google.com/search?q=roll+a+die) | Roll multiple virtual dice and add modifiers. |
-| Interactive tool | [spinner](https://www.google.com/search?q=spinner) | Use a number wheel or fidget-spinner mode. |
-| Interactive tool | [animal sounds](https://www.google.com/search?q=animal+sounds) | Play calls from multiple animals. |
-| Interactive tool | [metronome](https://www.google.com/search?q=metronome) | Set a BPM and play a metronome. |
-| Interactive tool | [color picker](https://www.google.com/search?q=color+picker) | Adjust a color and inspect its values. |
+| Game | [block breaker](https://www.google.com/search?q=block+breaker) | Playable Breakout-style game directly in Search. |
+| Search joke | [recursion](https://www.google.com/search?q=recursion) | Google asks "Did you mean: recursion", linking back to the same search. |
 
-### Editor's pick: Block Breaker
+The full catalog of documented games, animations, and search tools is maintained in [`easter-eggs-data.json`](easter-eggs-data.json).
 
-**Block Breaker** is the best starting point. The page-wide animations are clever but over in seconds; this is a complete, replayable game built directly into Search. It is also the strongest proof that this catalog should cover interactive Search experiences, not only one-off visual jokes.
+### Featured interaction: Block Breaker
 
-### What do you think?
+**Block Breaker** is an arcade game rendered inside a Search card. While many visual Easter eggs run for only a few seconds, this entry is a playable mini-game embedded directly in Search results.
 
-Do you agree that Block Breaker deserves the top spot? Start a GitHub Discussion to nominate the next featured entry, challenge this pick, or share a reproducible verification for an interaction that is missing from the catalog. Include the search term, country/language, device, date, and a screenshot or recording whenever possible.
-
-Availability can still vary by country, language, device, account, accessibility settings, and Google experiments. Open [`easter-eggs-data.json`](easter-eggs-data.json) for aliases, sources, notes, and verification details.
+To nominate a featured entry or suggest additions, open a GitHub Discussion or issue with the query, testing environment, date, and visual confirmation.
 
 ## Why this repository exists
 
-Searches for “Google Easter eggs” return many nearly identical lists, often generated or rewritten by AI, that mix together:
+Searches for "Google Easter eggs" return many nearly identical lists, often generated or rewritten by AI, that mix together:
 
 - effects that still exist today;
 - effects that were removed years ago (for example, Zerg Rush and Atari Breakout);
 - seasonal effects presented as permanent features;
-- third-party sites (especially **elgooG** and **mrdoob.com**) presented as Google features — Google Gravity is the most common example, although it **was never a google.com feature**;
+- third-party sites (especially **elgooG** and **mrdoob.com**) presented as Google features: Google Gravity is the most common example, although it **was never a google.com feature**;
 - items that no longer work in any real Search result, despite being described as active.
 
 This project separates those categories by recording the search term, observed behavior, date, and verification method instead of copying existing lists.
@@ -87,13 +69,20 @@ An `unconfirmed` item is **not necessarily false**. It means only that reproduct
 
 ## Catalog format
 
-The catalog currently lives in this README. Structured records are kept in [`easter-eggs-data.json`](easter-eggs-data.json).
+The structured catalog in [`easter-eggs-data.json`](easter-eggs-data.json) is the single source of truth for this project. It tracks verification dates, sources, aliases, and known caveats for every item.
 
-## Known limitations
+## Variations and limitations
 
-- Recent Google Easter eggs are often **promotional knowledge panels** tied to films, series, games, artists, and product launches. They can disappear within weeks, so this catalog prioritizes durable effects, classic games, and Search tools.
-- Short CSS/JavaScript animations such as “do a barrel roll” are difficult to capture in a static screenshot because they finish within seconds. The `verification_method` field records that limitation.
-- Search results can vary by signed-in account, history, region (`gl`), language (`hl`), device, accessibility settings, and active Google experiments. Relevant differences are recorded in `notes`.
+Google Search interactions vary depending on several factors:
+
+- **Region and language:** Some terms require English (`hl=en`) or specific regional endpoints (`gl`) to trigger.
+- **Account personalization and experiments:** Signed-in accounts may receive experimental interfaces or A/B tests where specific cards do not appear.
+- **Accessibility settings:** Reduced-motion preferences in your browser or operating system disable or soften animations such as `67` and `do a barrel roll`.
+- **Promotional lifespan:** Promotional Easter eggs tied to films, games, or events frequently disappear within weeks. This catalog prioritizes durable features and permanent tools.
+
+## Privacy
+
+Clicking search links sends query parameters directly to Google Search (`google.com/search`). This repository does not host analytics, collect queries, set cookies, or track user interaction.
 
 ## Contributing
 
@@ -107,5 +96,5 @@ Do not trust any list, including this one, without testing it yourself.
 
 ## Disclaimer
 
-This is an independent catalog with no affiliation with Google or Alphabet. “Google” is a trademark of Google LLC. Third-party sites such as elgooG and mrdoob.com are mentioned for identification only and are not endorsed by this project.
+This is an independent catalog with no affiliation with Google or Alphabet. "Google" is a trademark of Google LLC. Third-party sites such as elgooG and mrdoob.com are mentioned for identification only and are not endorsed by this project.
 
