@@ -2,20 +2,6 @@
 
 An independent, source-backed catalog of Google Search Easter eggs, games, and visual interactions, with direct links and reproducible verification.
 
-## Quick start
-
-Five representative interactions to test right away. Search the query on `google.com` (English interface recommended for the most consistent results):
-
-| Type | Search query | Expected effect |
-| --- | --- | --- |
-| Animation | [67](https://www.google.com/search?q=67) | The results page briefly wobbles. |
-| Animation | [do a barrel roll](https://www.google.com/search?q=do+a+barrel+roll) | The results page rotates 360 degrees. |
-| Animation | [askew](https://www.google.com/search?q=askew) | The results page tilts slightly. |
-| Game | [block breaker](https://www.google.com/search?q=block+breaker) | Playable Breakout-style game directly in Search. |
-| Search joke | [recursion](https://www.google.com/search?q=recursion) | Google asks "Did you mean: recursion", linking back to the same search. |
-
-The full catalog of documented games, animations, and search tools is maintained in [`easter-eggs-data.json`](easter-eggs-data.json).
-
 ## Contributing via Discussions
 
 All contributions and catalog updates are centralized exclusively in [GitHub Discussions](https://github.com/SamuelAraag/google-easter-eggs/discussions).
@@ -34,6 +20,20 @@ To allow reproducible verification, include the following details in your post:
 - **Source:** URL of an independent report, article, or forum thread
 
 Once verified and discussed, approved items are curated and added directly to [`easter-eggs-data.json`](easter-eggs-data.json).
+
+## Quick start
+
+Five representative interactions to test right away. Search the query on `google.com` (English interface recommended for the most consistent results):
+
+| Type | Search query | Expected effect |
+| --- | --- | --- |
+| Animation | [67](https://www.google.com/search?q=67) | The results page briefly wobbles. |
+| Animation | [do a barrel roll](https://www.google.com/search?q=do+a+barrel+roll) | The results page rotates 360 degrees. |
+| Animation | [askew](https://www.google.com/search?q=askew) | The results page tilts slightly. |
+| Game | [block breaker](https://www.google.com/search?q=block+breaker) | Playable Breakout-style game directly in Search. |
+| Search joke | [recursion](https://www.google.com/search?q=recursion) | Google asks "Did you mean: recursion", linking back to the same search. |
+
+The full catalog of documented games, animations, and search tools is maintained in [`easter-eggs-data.json`](easter-eggs-data.json).
 
 ### Featured interaction: Block Breaker
 
